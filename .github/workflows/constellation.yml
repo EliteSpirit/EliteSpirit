@@ -28,13 +28,13 @@ jobs:
 
       - name: Deploy to output branch
         run: |
+          cp -r dist /tmp/dist-backup
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git checkout --orphan output || git checkout output
           git rm -rf . || true
-          git checkout main -- dist
-          mv dist/* .
-          rm -rf dist scripts .github
+          git clean -fd
+          cp /tmp/dist-backup/* .
           git add -A
           git commit -m "Update constellation" || echo "No changes"
           git push origin output --force
