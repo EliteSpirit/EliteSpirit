@@ -22,7 +22,7 @@ jobs:
 
       - name: Generate constellation SVG
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.CONSTELLATION_TOKEN }}
           GH_USERNAME: ${{ github.repository_owner }}
         run: node scripts/generate-constellation.js
 
