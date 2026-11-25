@@ -1,5 +1,5 @@
 # EliteSpirit
 
-Разрабатываю утилиты для автоматизации и участвую в проектах с открытым исходным кодом.
+I build automation tools and contribute to open-source projects.
 
-![Зацикленная анимация падающих блоков](assets/falling-blocks.gif)
+![Looping animation of falling blocks](assets/falling-blocks.gif)
